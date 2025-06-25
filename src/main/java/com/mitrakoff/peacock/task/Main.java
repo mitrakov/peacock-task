@@ -11,7 +11,7 @@ import java.util.zip.GZIPInputStream;
  * Minimum Java: 1.8
  * Note that input file is supposed to be GZipped
  * Unit tests can be found in "test" folder
- * File "lng-4.txt.gz" takes ≈ 10084 msec. with -Xmx1G, and ≈ 9084 msec. w/o memory restrictions (Mac 2018, 2.6 GHz Intel Core i7)
+ * File "lng-4.txt.gz" takes ≈ 5983 msec. with -Xmx1G, and ≈ 5280 msec. w/o memory restrictions (Mac M1 2020)
  * Total group count for "lng-4.txt.gz": 998085
  */
 public class Main {

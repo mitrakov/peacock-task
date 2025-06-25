@@ -3,4 +3,5 @@
 * Minimum Java: 1.8
 * Note that input file is supposed to be GZipped
 * Unit tests can be found in "test" folder
-* File "lng-4.txt.gz" takes ≈ `10084` msec. with `-Xmx1G`, and ≈ `9084` msec. w/o memory restrictions
+* File "lng-4.txt.gz" takes ≈ `5983` msec. with `-Xmx1G`, and ≈ `5280` msec. w/o memory restrictions (Mac M1 2020)
+* Total group count for "lng-4.txt.gz": 998085
