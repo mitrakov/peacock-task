@@ -42,6 +42,7 @@ public class BusinessLogicTest {
         p.addRow(new Row(new String[] {"14","42","26","51", ""}));
         p.addRow(new Row(new String[] {"25","13","40","27","11","42","21","19"}));
         p.addRow(new Row(new String[] {"11","27","31","10", ""}));
+
         final List<Set<Row>> result = p.getGroupedData();
 
         assertEquals(3, result.size());

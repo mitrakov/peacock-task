@@ -9,10 +9,18 @@ import java.util.Arrays;
  * Use .toString() to render the Row back to original text view, with quotes and ";"
  */
 public class Row {
-    String[] data;
+    private final String[] data;
 
     public Row(String[] row) {
         this.data = row;
+    }
+
+    public String get(int i) {
+        return data[i];
+    }
+
+    public int size() {
+        return data.length;
     }
 
     @Override

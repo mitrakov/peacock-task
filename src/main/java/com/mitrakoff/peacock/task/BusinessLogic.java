@@ -34,12 +34,12 @@ public final class BusinessLogic {
 
     private GroupId addToIndex(Row row) {
         // if a new row is too long => create new buckets for index
-        ensureIndexSize(row.data.length);
+        ensureIndexSize(row.size());
 
         // find the collisions of a new row with what exists in index
         final List<GroupId> collisions = new ArrayList<>();
-        for (int i = 0; i < row.data.length; i++) {
-            final String t = row.data[i];
+        for (int i = 0; i < row.size(); i++) {
+            final String t = row.get(i);
             final Map<String, GroupId> bucket = index.get(i);
             final GroupId grpId = bucket.get(t);
             if (grpId != null)
@@ -77,8 +77,8 @@ public final class BusinessLogic {
     }
 
     private void putToIndex(GroupId group, Row row) {
-        for (int i = 0; i < row.data.length; i++) {
-            final String s = row.data[i];
+        for (int i = 0; i < row.size(); i++) {
+            final String s = row.get(i);
             if (!s.isEmpty()) { // empty values should not go to index
                 final Map<String, GroupId> bucket = index.get(i);
                 bucket.put(s, group);
